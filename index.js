@@ -19,7 +19,7 @@ function onKeyDown(event) {
 main.addEventListener('click', onClick)
 document.addEventListener('keydown', onClick)
 
-const inputBox = document.getElementById('')
+const inputBox = document.getElementById('id')
 
 function onInputKeyDown(event) {
   console.log(event)
@@ -33,3 +33,40 @@ if (event.keyCode === 71) {
 inputBox.addEventListener('keydown', onInputKeyDown)
 
 
+
+const p = document.getElementById('yellow')
+
+// function onYellowClick() {
+  
+// }
+
+p.addEventListener('click', (event) => {
+  console.log(event)
+  p.style.backgroundColor = 'yellow'
+} )
+
+
+
+const button = document.getElementById('plus')
+
+button.addEventListener('click', () => {
+  const newP = document.createElement('p')
+  newP.innerHTML = 'Congratulations'
+  
+  document.body.appendChild(newP)
+  
+})
+
+
+
+const divs = document.querySelectorAll('div')
+
+for (let div of divs) {
+  div.addEventListener('click', (event) => {
+    console.log(event)
+    event.stopPropagation() // stops bubbling from happening
+    
+    
+    
+  })
+}
